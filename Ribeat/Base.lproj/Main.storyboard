@@ -173,6 +173,9 @@
                                 <state key="normal" title="Cash">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cashButtonPressed:" destination="HeZ-H9-EiQ" eventType="touchUpInside" id="LCy-Yk-FXt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcy-0c-qyy">
                                 <rect key="frame" x="1224" y="885" width="93" height="48"/>
@@ -182,6 +185,9 @@
                                 <state key="normal" title="Card">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cardButtonPressed:" destination="HeZ-H9-EiQ" eventType="touchUpInside" id="qmo-Zr-SJa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pay now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="443-Mj-O0T">
                                 <rect key="frame" x="988" y="891" width="108" height="36"/>
