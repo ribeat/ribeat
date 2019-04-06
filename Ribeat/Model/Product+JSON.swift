@@ -10,7 +10,7 @@ import Foundation
 
 extension Product : Encodable {
     private enum CodingKeys : String, CodingKey {
-        case pId="id", barcode, details, name, price, type, vat, category="categoryId", orderItem, ribImage
+        case pId="id", barcode, details, name, price, type, vat, category="categoryId", orderItem, ribImage="image"
     }
     
     public func encode(to encoder: Encoder) throws {
@@ -23,7 +23,7 @@ extension Product : Encodable {
         try container.encode(type, forKey: .type)
         try container.encode(vat, forKey: .vat)
         try container.encode(category?.pcId, forKey: .category)
-        try container.encode(ribImage ?? nil, forKey: .ribImage)
+        try container.encode(ribImage?.getImageData() ?? nil, forKey: .ribImage)
         //try container.encode(products ?? nil, forKey: .products)
     }
 }
