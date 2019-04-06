@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		48ED7BC4CD1CB0C11FA9E3A2 /* Pods_Ribeat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857F1592251A392C235D854E /* Pods_Ribeat.framework */; };
 		6C9B1EB3AB65BFB4E312D8B4 /* Pods_RibeatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F3F380285570E59C8BE611 /* Pods_RibeatTests.framework */; };
+		B5793E802259058C00A1AC64 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5793E7F2259058C00A1AC64 /* OrderViewController.swift */; };
 		F204B4B62258831C00E027AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204B4B52258831C00E027AE /* AppDelegate.swift */; };
 		F204B4B82258831C00E027AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204B4B72258831C00E027AE /* ViewController.swift */; };
 		F204B4BB2258831C00E027AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204B4B92258831C00E027AE /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		20F3F380285570E59C8BE611 /* Pods_RibeatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RibeatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		857F1592251A392C235D854E /* Pods_Ribeat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ribeat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D0753C20A53E1CAF45F490C /* Pods-RibeatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RibeatTests.debug.xcconfig"; path = "Target Support Files/Pods-RibeatTests/Pods-RibeatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5793E7F2259058C00A1AC64 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		BEB78FF645E154357FD0FF43 /* Pods-RibeatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RibeatTests.release.xcconfig"; path = "Target Support Files/Pods-RibeatTests/Pods-RibeatTests.release.xcconfig"; sourceTree = "<group>"; };
 		E1BFD31D28092C7FDF535057 /* Pods-Ribeat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ribeat.debug.xcconfig"; path = "Target Support Files/Pods-Ribeat/Pods-Ribeat.debug.xcconfig"; sourceTree = "<group>"; };
 		F204B4B22258831C00E027AE /* Ribeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +121,7 @@
 				F2AEB703225896A100BF3ECF /* Model */,
 				F204B4B52258831C00E027AE /* AppDelegate.swift */,
 				F204B4B72258831C00E027AE /* ViewController.swift */,
+				B5793E7F2259058C00A1AC64 /* OrderViewController.swift */,
 				F204B4B92258831C00E027AE /* Main.storyboard */,
 				F204B4BF2258831D00E027AE /* Assets.xcassets */,
 				F204B4C12258831D00E027AE /* LaunchScreen.storyboard */,
@@ -372,6 +375,7 @@
 				F2AEB7062258971C00BF3ECF /* Ribeat.xcdatamodeld in Sources */,
 				F2AEB7082258A06200BF3ECF /* PopulateInitialData.swift in Sources */,
 				F2AEB70F2258C9B900BF3ECF /* RibServing.swift in Sources */,
+				B5793E802259058C00A1AC64 /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YZS2T2FJ58;
 				INFOPLIST_FILE = Ribeat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -556,6 +561,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YZS2T2FJ58;
 				INFOPLIST_FILE = Ribeat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
