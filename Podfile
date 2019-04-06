@@ -21,9 +21,11 @@ target 'Ribeat' do
   pod 'RxCocoa'
   pod 'Alamofire',  '~> 4.5'
   pod 'SwiftSocket'
- 	pod 'Embassy', '~> 4.0'
-  pod 'EnvoyAmbassador', '~> 4.0'
- 
+# 	pod 'Embassy', '~> 4.0'
+#  pod 'EnvoyAmbassador', '~> 4.0'
+  pod 'Swifter'
+
+
   target 'RibeatTests' do
     inherit! :search_paths
     pod 'RxBlocking', '~> 4.0'

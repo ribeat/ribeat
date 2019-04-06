@@ -19,6 +19,9 @@
 		F2AEB7062258971C00BF3ECF /* Ribeat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7042258971C00BF3ECF /* Ribeat.xcdatamodeld */; };
 		F2AEB7082258A06200BF3ECF /* PopulateInitialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7072258A06200BF3ECF /* PopulateInitialData.swift */; };
 		F2AEB70F2258C9B900BF3ECF /* RibServing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB70E2258C9B900BF3ECF /* RibServing.swift */; };
+		F2AEB7312258D2F900BF3ECF /* ProductCategory+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7302258D2F900BF3ECF /* ProductCategory+JSON.swift */; };
+		F2AEB7332258E4F100BF3ECF /* RibImage+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7322258E4F100BF3ECF /* RibImage+JSON.swift */; };
+		F2AEB7352258EE8800BF3ECF /* Product+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7342258EE8800BF3ECF /* Product+JSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		F2AEB7052258971C00BF3ECF /* Ribeat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ribeat.xcdatamodel; sourceTree = "<group>"; };
 		F2AEB7072258A06200BF3ECF /* PopulateInitialData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulateInitialData.swift; sourceTree = "<group>"; };
 		F2AEB70E2258C9B900BF3ECF /* RibServing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibServing.swift; sourceTree = "<group>"; };
+		F2AEB7302258D2F900BF3ECF /* ProductCategory+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductCategory+JSON.swift"; sourceTree = "<group>"; };
+		F2AEB7322258E4F100BF3ECF /* RibImage+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RibImage+JSON.swift"; sourceTree = "<group>"; };
+		F2AEB7342258EE8800BF3ECF /* Product+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+JSON.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,9 @@
 			children = (
 				F2AEB7042258971C00BF3ECF /* Ribeat.xcdatamodeld */,
 				F2AEB7072258A06200BF3ECF /* PopulateInitialData.swift */,
+				F2AEB7302258D2F900BF3ECF /* ProductCategory+JSON.swift */,
+				F2AEB7322258E4F100BF3ECF /* RibImage+JSON.swift */,
+				F2AEB7342258EE8800BF3ECF /* Product+JSON.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,7 +195,7 @@
 				F204B4C52258831D00E027AE /* Sources */,
 				F204B4C62258831D00E027AE /* Frameworks */,
 				F204B4C72258831D00E027AE /* Resources */,
-				3DEA28E5AC9E9B448288603B /* [CP] Embed Pods Frameworks */,
+				31AA3FE12D3935B89619A487 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,7 +266,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3DEA28E5AC9E9B448288603B /* [CP] Embed Pods Frameworks */ = {
+		31AA3FE12D3935B89619A487 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -317,24 +326,22 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Ribeat/Pods-Ribeat-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Embassy/Embassy.framework",
-				"${BUILT_PRODUCTS_DIR}/EnvoyAmbassador/EnvoyAmbassador.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/Swifter/Swifter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Embassy.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EnvoyAmbassador.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swifter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -370,12 +377,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2AEB7332258E4F100BF3ECF /* RibImage+JSON.swift in Sources */,
 				F204B4B82258831C00E027AE /* ViewController.swift in Sources */,
 				F204B4B62258831C00E027AE /* AppDelegate.swift in Sources */,
+				F2AEB7352258EE8800BF3ECF /* Product+JSON.swift in Sources */,
 				F2AEB7062258971C00BF3ECF /* Ribeat.xcdatamodeld in Sources */,
 				F2AEB7082258A06200BF3ECF /* PopulateInitialData.swift in Sources */,
 				F2AEB70F2258C9B900BF3ECF /* RibServing.swift in Sources */,
 				B5793E802259058C00A1AC64 /* OrderViewController.swift in Sources */,
+				F2AEB7312258D2F900BF3ECF /* ProductCategory+JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
