@@ -17,17 +17,25 @@ func populateInitialData(container: NSPersistentContainer) {
     starters.name = "Starters"
     starters.deliveryOrder = 1
     
+    let startOne = Product(context: context)
+    startOne.name = "Spring Rolls"
+    startOne.details = "Spring Rolls vegetarian or pork meat"
+    startOne.price = 12.50
+    startOne.type = "food"
+    startOne.vat = 9.0
+    
+    starters.addToProducts(startOne)
     
 //    productCat.im
 
     /*
-    BURGERS.
+     3-5 articles per group
+     Starters
+    BURGERS
     SALADS.
     FISH.
-    CHICKEN.
-    DESSERT BAR.
     MEAT
- Halal
-alcoholic beverages
+    alcoholic beverages
+     Non-alcoholic Beverages
  */
 }

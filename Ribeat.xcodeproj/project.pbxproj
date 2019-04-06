@@ -12,12 +12,12 @@
 		F204B4B62258831C00E027AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204B4B52258831C00E027AE /* AppDelegate.swift */; };
 		F204B4B82258831C00E027AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204B4B72258831C00E027AE /* ViewController.swift */; };
 		F204B4BB2258831C00E027AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204B4B92258831C00E027AE /* Main.storyboard */; };
-		F204B4BE2258831C00E027AE /* Ribeat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F204B4BC2258831C00E027AE /* Ribeat.xcdatamodeld */; };
 		F204B4C02258831D00E027AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F204B4BF2258831D00E027AE /* Assets.xcassets */; };
 		F204B4C32258831D00E027AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204B4C12258831D00E027AE /* LaunchScreen.storyboard */; };
 		F204B4CE2258831D00E027AE /* RibeatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204B4CD2258831D00E027AE /* RibeatTests.swift */; };
 		F2AEB7062258971C00BF3ECF /* Ribeat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7042258971C00BF3ECF /* Ribeat.xcdatamodeld */; };
 		F2AEB7082258A06200BF3ECF /* PopulateInitialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7072258A06200BF3ECF /* PopulateInitialData.swift */; };
+		F2AEB70F2258C9B900BF3ECF /* RibServing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB70E2258C9B900BF3ECF /* RibServing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		F204B4B52258831C00E027AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F204B4B72258831C00E027AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F204B4BA2258831C00E027AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F204B4BD2258831C00E027AE /* Ribeat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ribeat.xcdatamodel; sourceTree = "<group>"; };
 		F204B4BF2258831D00E027AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F204B4C22258831D00E027AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F204B4C42258831D00E027AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		F204B4CF2258831D00E027AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2AEB7052258971C00BF3ECF /* Ribeat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ribeat.xcdatamodel; sourceTree = "<group>"; };
 		F2AEB7072258A06200BF3ECF /* PopulateInitialData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulateInitialData.swift; sourceTree = "<group>"; };
+		F2AEB70E2258C9B900BF3ECF /* RibServing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibServing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +115,7 @@
 		F204B4B42258831C00E027AE /* Ribeat */ = {
 			isa = PBXGroup;
 			children = (
+				F2AEB70D2258C9A400BF3ECF /* Network */,
 				F2AEB703225896A100BF3ECF /* Model */,
 				F204B4B52258831C00E027AE /* AppDelegate.swift */,
 				F204B4B72258831C00E027AE /* ViewController.swift */,
@@ -122,7 +123,6 @@
 				F204B4BF2258831D00E027AE /* Assets.xcassets */,
 				F204B4C12258831D00E027AE /* LaunchScreen.storyboard */,
 				F204B4C42258831D00E027AE /* Info.plist */,
-				F204B4BC2258831C00E027AE /* Ribeat.xcdatamodeld */,
 			);
 			path = Ribeat;
 			sourceTree = "<group>";
@@ -143,6 +143,14 @@
 				F2AEB7072258A06200BF3ECF /* PopulateInitialData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F2AEB70D2258C9A400BF3ECF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F2AEB70E2258C9B900BF3ECF /* RibServing.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,7 +371,7 @@
 				F204B4B62258831C00E027AE /* AppDelegate.swift in Sources */,
 				F2AEB7062258971C00BF3ECF /* Ribeat.xcdatamodeld in Sources */,
 				F2AEB7082258A06200BF3ECF /* PopulateInitialData.swift in Sources */,
-				F204B4BE2258831C00E027AE /* Ribeat.xcdatamodeld in Sources */,
+				F2AEB70F2258C9B900BF3ECF /* RibServing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,16 +644,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F204B4BC2258831C00E027AE /* Ribeat.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F204B4BD2258831C00E027AE /* Ribeat.xcdatamodel */,
-			);
-			currentVersion = F204B4BD2258831C00E027AE /* Ribeat.xcdatamodel */;
-			path = Ribeat.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		F2AEB7042258971C00BF3ECF /* Ribeat.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
