@@ -76,7 +76,6 @@
 				9D0753C20A53E1CAF45F490C /* Pods-RibeatTests.debug.xcconfig */,
 				BEB78FF645E154357FD0FF43 /* Pods-RibeatTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -520,7 +519,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fun-monkeys.Ribeat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -539,7 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fun-monkeys.Ribeat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -560,7 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fun-monkeys.RibeatTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ribeat.app/Ribeat";
 			};
@@ -582,7 +581,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fun-monkeys.RibeatTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ribeat.app/Ribeat";
 			};
