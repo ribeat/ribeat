@@ -16,6 +16,8 @@
 		F204B4C02258831D00E027AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F204B4BF2258831D00E027AE /* Assets.xcassets */; };
 		F204B4C32258831D00E027AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204B4C12258831D00E027AE /* LaunchScreen.storyboard */; };
 		F204B4CE2258831D00E027AE /* RibeatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204B4CD2258831D00E027AE /* RibeatTests.swift */; };
+		F2AEB7062258971C00BF3ECF /* Ribeat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7042258971C00BF3ECF /* Ribeat.xcdatamodeld */; };
+		F2AEB7082258A06200BF3ECF /* PopulateInitialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7072258A06200BF3ECF /* PopulateInitialData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		F204B4C92258831D00E027AE /* RibeatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RibeatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F204B4CD2258831D00E027AE /* RibeatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibeatTests.swift; sourceTree = "<group>"; };
 		F204B4CF2258831D00E027AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2AEB7052258971C00BF3ECF /* Ribeat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ribeat.xcdatamodel; sourceTree = "<group>"; };
+		F2AEB7072258A06200BF3ECF /* PopulateInitialData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulateInitialData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		F204B4B42258831C00E027AE /* Ribeat */ = {
 			isa = PBXGroup;
 			children = (
+				F2AEB703225896A100BF3ECF /* Model */,
 				F204B4B52258831C00E027AE /* AppDelegate.swift */,
 				F204B4B72258831C00E027AE /* ViewController.swift */,
 				F204B4B92258831C00E027AE /* Main.storyboard */,
@@ -129,6 +134,15 @@
 				F204B4CF2258831D00E027AE /* Info.plist */,
 			);
 			path = RibeatTests;
+			sourceTree = "<group>";
+		};
+		F2AEB703225896A100BF3ECF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2AEB7042258971C00BF3ECF /* Ribeat.xcdatamodeld */,
+				F2AEB7072258A06200BF3ECF /* PopulateInitialData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +361,8 @@
 			files = (
 				F204B4B82258831C00E027AE /* ViewController.swift in Sources */,
 				F204B4B62258831C00E027AE /* AppDelegate.swift in Sources */,
+				F2AEB7062258971C00BF3ECF /* Ribeat.xcdatamodeld in Sources */,
+				F2AEB7082258A06200BF3ECF /* PopulateInitialData.swift in Sources */,
 				F204B4BE2258831C00E027AE /* Ribeat.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,7 +536,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fun-monkeys.Ribeat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -539,7 +555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fun-monkeys.Ribeat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -626,6 +642,16 @@
 				F204B4BD2258831C00E027AE /* Ribeat.xcdatamodel */,
 			);
 			currentVersion = F204B4BD2258831C00E027AE /* Ribeat.xcdatamodel */;
+			path = Ribeat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		F2AEB7042258971C00BF3ECF /* Ribeat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F2AEB7052258971C00BF3ECF /* Ribeat.xcdatamodel */,
+			);
+			currentVersion = F2AEB7052258971C00BF3ECF /* Ribeat.xcdatamodel */;
 			path = Ribeat.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
