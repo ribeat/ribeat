@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48ED7BC4CD1CB0C11FA9E3A2 /* Pods_Ribeat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857F1592251A392C235D854E /* Pods_Ribeat.framework */; };
+		6C9B1EB3AB65BFB4E312D8B4 /* Pods_RibeatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F3F380285570E59C8BE611 /* Pods_RibeatTests.framework */; };
+		F204B4B62258831C00E027AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204B4B52258831C00E027AE /* AppDelegate.swift */; };
+		F204B4B82258831C00E027AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204B4B72258831C00E027AE /* ViewController.swift */; };
+		F204B4BB2258831C00E027AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204B4B92258831C00E027AE /* Main.storyboard */; };
+		F204B4BE2258831C00E027AE /* Ribeat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F204B4BC2258831C00E027AE /* Ribeat.xcdatamodeld */; };
+		F204B4C02258831D00E027AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F204B4BF2258831D00E027AE /* Assets.xcassets */; };
+		F204B4C32258831D00E027AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F204B4C12258831D00E027AE /* LaunchScreen.storyboard */; };
+		F204B4CE2258831D00E027AE /* RibeatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F204B4CD2258831D00E027AE /* RibeatTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F204B4CA2258831D00E027AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F204B4AA2258831C00E027AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F204B4B12258831C00E027AE;
+			remoteInfo = Ribeat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A73078CD9660A8F7E56CDB1 /* Pods-Ribeat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ribeat.release.xcconfig"; path = "Target Support Files/Pods-Ribeat/Pods-Ribeat.release.xcconfig"; sourceTree = "<group>"; };
+		20F3F380285570E59C8BE611 /* Pods_RibeatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RibeatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		857F1592251A392C235D854E /* Pods_Ribeat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ribeat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D0753C20A53E1CAF45F490C /* Pods-RibeatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RibeatTests.debug.xcconfig"; path = "Target Support Files/Pods-RibeatTests/Pods-RibeatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BEB78FF645E154357FD0FF43 /* Pods-RibeatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RibeatTests.release.xcconfig"; path = "Target Support Files/Pods-RibeatTests/Pods-RibeatTests.release.xcconfig"; sourceTree = "<group>"; };
+		E1BFD31D28092C7FDF535057 /* Pods-Ribeat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ribeat.debug.xcconfig"; path = "Target Support Files/Pods-Ribeat/Pods-Ribeat.debug.xcconfig"; sourceTree = "<group>"; };
+		F204B4B22258831C00E027AE /* Ribeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ribeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F204B4B52258831C00E027AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F204B4B72258831C00E027AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F204B4BA2258831C00E027AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F204B4BD2258831C00E027AE /* Ribeat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ribeat.xcdatamodel; sourceTree = "<group>"; };
+		F204B4BF2258831D00E027AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F204B4C22258831D00E027AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F204B4C42258831D00E027AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F204B4C92258831D00E027AE /* RibeatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RibeatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F204B4CD2258831D00E027AE /* RibeatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibeatTests.swift; sourceTree = "<group>"; };
+		F204B4CF2258831D00E027AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F204B4AF2258831C00E027AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48ED7BC4CD1CB0C11FA9E3A2 /* Pods_Ribeat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F204B4C62258831D00E027AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C9B1EB3AB65BFB4E312D8B4 /* Pods_RibeatTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51BAE754DE6DC11574A916B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1BFD31D28092C7FDF535057 /* Pods-Ribeat.debug.xcconfig */,
+				1A73078CD9660A8F7E56CDB1 /* Pods-Ribeat.release.xcconfig */,
+				9D0753C20A53E1CAF45F490C /* Pods-RibeatTests.debug.xcconfig */,
+				BEB78FF645E154357FD0FF43 /* Pods-RibeatTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C7B2782D2C4C2E591B2330D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				857F1592251A392C235D854E /* Pods_Ribeat.framework */,
+				20F3F380285570E59C8BE611 /* Pods_RibeatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F204B4A92258831C00E027AE = {
+			isa = PBXGroup;
+			children = (
+				F204B4B42258831C00E027AE /* Ribeat */,
+				F204B4CC2258831D00E027AE /* RibeatTests */,
+				F204B4B32258831C00E027AE /* Products */,
+				51BAE754DE6DC11574A916B6 /* Pods */,
+				C7B2782D2C4C2E591B2330D0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F204B4B32258831C00E027AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F204B4B22258831C00E027AE /* Ribeat.app */,
+				F204B4C92258831D00E027AE /* RibeatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F204B4B42258831C00E027AE /* Ribeat */ = {
+			isa = PBXGroup;
+			children = (
+				F204B4B52258831C00E027AE /* AppDelegate.swift */,
+				F204B4B72258831C00E027AE /* ViewController.swift */,
+				F204B4B92258831C00E027AE /* Main.storyboard */,
+				F204B4BF2258831D00E027AE /* Assets.xcassets */,
+				F204B4C12258831D00E027AE /* LaunchScreen.storyboard */,
+				F204B4C42258831D00E027AE /* Info.plist */,
+				F204B4BC2258831C00E027AE /* Ribeat.xcdatamodeld */,
+			);
+			path = Ribeat;
+			sourceTree = "<group>";
+		};
+		F204B4CC2258831D00E027AE /* RibeatTests */ = {
+			isa = PBXGroup;
+			children = (
+				F204B4CD2258831D00E027AE /* RibeatTests.swift */,
+				F204B4CF2258831D00E027AE /* Info.plist */,
+			);
+			path = RibeatTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F204B4B12258831C00E027AE /* Ribeat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F204B4D22258831D00E027AE /* Build configuration list for PBXNativeTarget "Ribeat" */;
+			buildPhases = (
+				F581740E800859217F13F611 /* [CP] Check Pods Manifest.lock */,
+				F204B4AE2258831C00E027AE /* Sources */,
+				F204B4AF2258831C00E027AE /* Frameworks */,
+				F204B4B02258831C00E027AE /* Resources */,
+				757A2A11BD5F7BEF37080C02 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ribeat;
+			productName = Ribeat;
+			productReference = F204B4B22258831C00E027AE /* Ribeat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F204B4C82258831D00E027AE /* RibeatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F204B4D52258831D00E027AE /* Build configuration list for PBXNativeTarget "RibeatTests" */;
+			buildPhases = (
+				68513751090CCF76FEA722B7 /* [CP] Check Pods Manifest.lock */,
+				F204B4C52258831D00E027AE /* Sources */,
+				F204B4C62258831D00E027AE /* Frameworks */,
+				F204B4C72258831D00E027AE /* Resources */,
+				3DEA28E5AC9E9B448288603B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F204B4CB2258831D00E027AE /* PBXTargetDependency */,
+			);
+			name = RibeatTests;
+			productName = RibeatTests;
+			productReference = F204B4C92258831D00E027AE /* RibeatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F204B4AA2258831C00E027AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Alin Brindusescu";
+				TargetAttributes = {
+					F204B4B12258831C00E027AE = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					F204B4C82258831D00E027AE = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = F204B4B12258831C00E027AE;
+					};
+				};
+			};
+			buildConfigurationList = F204B4AD2258831C00E027AE /* Build configuration list for PBXProject "Ribeat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F204B4A92258831C00E027AE;
+			productRefGroup = F204B4B32258831C00E027AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F204B4B12258831C00E027AE /* Ribeat */,
+				F204B4C82258831D00E027AE /* RibeatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F204B4B02258831C00E027AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F204B4C32258831D00E027AE /* LaunchScreen.storyboard in Resources */,
+				F204B4C02258831D00E027AE /* Assets.xcassets in Resources */,
+				F204B4BB2258831C00E027AE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F204B4C72258831D00E027AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DEA28E5AC9E9B448288603B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RibeatTests/Pods-RibeatTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RibeatTests/Pods-RibeatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68513751090CCF76FEA722B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RibeatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		757A2A11BD5F7BEF37080C02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ribeat/Pods-Ribeat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Embassy/Embassy.framework",
+				"${BUILT_PRODUCTS_DIR}/EnvoyAmbassador/EnvoyAmbassador.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Embassy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EnvoyAmbassador.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ribeat/Pods-Ribeat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F581740E800859217F13F611 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ribeat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F204B4AE2258831C00E027AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F204B4B82258831C00E027AE /* ViewController.swift in Sources */,
+				F204B4B62258831C00E027AE /* AppDelegate.swift in Sources */,
+				F204B4BE2258831C00E027AE /* Ribeat.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F204B4C52258831D00E027AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F204B4CE2258831D00E027AE /* RibeatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F204B4CB2258831D00E027AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F204B4B12258831C00E027AE /* Ribeat */;
+			targetProxy = F204B4CA2258831D00E027AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F204B4B92258831C00E027AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F204B4BA2258831C00E027AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F204B4C12258831D00E027AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F204B4C22258831D00E027AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F204B4D02258831D00E027AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F204B4D12258831D00E027AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F204B4D32258831D00E027AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1BFD31D28092C7FDF535057 /* Pods-Ribeat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZS2T2FJ58;
+				INFOPLIST_FILE = Ribeat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fun-monkeys.Ribeat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F204B4D42258831D00E027AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A73078CD9660A8F7E56CDB1 /* Pods-Ribeat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZS2T2FJ58;
+				INFOPLIST_FILE = Ribeat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fun-monkeys.Ribeat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F204B4D62258831D00E027AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D0753C20A53E1CAF45F490C /* Pods-RibeatTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZS2T2FJ58;
+				INFOPLIST_FILE = RibeatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fun-monkeys.RibeatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ribeat.app/Ribeat";
+			};
+			name = Debug;
+		};
+		F204B4D72258831D00E027AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEB78FF645E154357FD0FF43 /* Pods-RibeatTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZS2T2FJ58;
+				INFOPLIST_FILE = RibeatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fun-monkeys.RibeatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ribeat.app/Ribeat";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F204B4AD2258831C00E027AE /* Build configuration list for PBXProject "Ribeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F204B4D02258831D00E027AE /* Debug */,
+				F204B4D12258831D00E027AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F204B4D22258831D00E027AE /* Build configuration list for PBXNativeTarget "Ribeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F204B4D32258831D00E027AE /* Debug */,
+				F204B4D42258831D00E027AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F204B4D52258831D00E027AE /* Build configuration list for PBXNativeTarget "RibeatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F204B4D62258831D00E027AE /* Debug */,
+				F204B4D72258831D00E027AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F204B4BC2258831C00E027AE /* Ribeat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F204B4BD2258831C00E027AE /* Ribeat.xcdatamodel */,
+			);
+			currentVersion = F204B4BD2258831C00E027AE /* Ribeat.xcdatamodel */;
+			path = Ribeat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F204B4AA2258831C00E027AE /* Project object */;
+}
