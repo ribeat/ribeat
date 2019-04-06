@@ -19,6 +19,7 @@
     <entity name="Order" representedClassName=".Order" syncable="YES" codeGenerationType="class">
         <attribute name="companyNmber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="datetime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="orderId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="orderReady" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="paymentType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="table" optional="YES" attributeType="String" syncable="YES"/>
@@ -29,6 +30,7 @@
     </entity>
     <entity name="OrderItem" representedClassName=".OrderItem" syncable="YES" codeGenerationType="class">
         <attribute name="baypassDeliveryOrder" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="oiId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="items" inverseEntity="Order" syncable="YES"/>
         <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="orderItem" inverseEntity="Product" syncable="YES"/>
@@ -63,10 +65,10 @@
         <element name="Configuration" positionX="-54" positionY="0" width="128" height="30"/>
         <element name="ConfigurationItem" positionX="-36" positionY="36" width="128" height="30"/>
         <element name="ConfigurationItemType" positionX="-63" positionY="-18" width="128" height="30"/>
-        <element name="RibImage" positionX="0" positionY="72" width="128" height="120"/>
-        <element name="Order" positionX="36" positionY="171" width="128" height="180"/>
-        <element name="OrderItem" positionX="-9" positionY="126" width="128" height="30"/>
+        <element name="Order" positionX="36" positionY="171" width="128" height="195"/>
+        <element name="OrderItem" positionX="-9" positionY="126" width="128" height="120"/>
         <element name="Product" positionX="18" positionY="108" width="128" height="195"/>
         <element name="ProductCategory" positionX="-18" positionY="63" width="128" height="120"/>
+        <element name="RibImage" positionX="0" positionY="72" width="128" height="120"/>
     </elements>
 </model>

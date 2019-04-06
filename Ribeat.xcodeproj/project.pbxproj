@@ -21,6 +21,8 @@
 		F2AEB7312258D2F900BF3ECF /* ProductCategory+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7302258D2F900BF3ECF /* ProductCategory+JSON.swift */; };
 		F2AEB7332258E4F100BF3ECF /* RibImage+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7322258E4F100BF3ECF /* RibImage+JSON.swift */; };
 		F2AEB7352258EE8800BF3ECF /* Product+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7342258EE8800BF3ECF /* Product+JSON.swift */; };
+		F2F9D2D9225916CC00731A23 /* Order+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9D2D8225916CC00731A23 /* Order+JSON.swift */; };
+		F2F9D2DB2259182700731A23 /* OrderItem+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9D2DA2259182700731A23 /* OrderItem+JSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		F2AEB7302258D2F900BF3ECF /* ProductCategory+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductCategory+JSON.swift"; sourceTree = "<group>"; };
 		F2AEB7322258E4F100BF3ECF /* RibImage+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RibImage+JSON.swift"; sourceTree = "<group>"; };
 		F2AEB7342258EE8800BF3ECF /* Product+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+JSON.swift"; sourceTree = "<group>"; };
+		F2F9D2D8225916CC00731A23 /* Order+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+JSON.swift"; sourceTree = "<group>"; };
+		F2F9D2DA2259182700731A23 /* OrderItem+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderItem+JSON.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 				F2AEB7302258D2F900BF3ECF /* ProductCategory+JSON.swift */,
 				F2AEB7322258E4F100BF3ECF /* RibImage+JSON.swift */,
 				F2AEB7342258EE8800BF3ECF /* Product+JSON.swift */,
+				F2F9D2D8225916CC00731A23 /* Order+JSON.swift */,
+				F2F9D2DA2259182700731A23 /* OrderItem+JSON.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,7 +348,9 @@
 				F2AEB7062258971C00BF3ECF /* Ribeat.xcdatamodeld in Sources */,
 				F2AEB7082258A06200BF3ECF /* PopulateInitialData.swift in Sources */,
 				F2AEB70F2258C9B900BF3ECF /* RibServing.swift in Sources */,
+				F2F9D2DB2259182700731A23 /* OrderItem+JSON.swift in Sources */,
 				F2AEB7312258D2F900BF3ECF /* ProductCategory+JSON.swift in Sources */,
+				F2F9D2D9225916CC00731A23 /* Order+JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
