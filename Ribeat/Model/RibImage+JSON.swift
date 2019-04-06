@@ -21,7 +21,7 @@ extension RibImage : Encodable {
         try container.encode(name, forKey: .name)
     }
     
-    public func getImageData() -> Data {
-        return UIImage(named: fileName!)!.jpegData(compressionQuality: 0.5)!.base64EncodedData()
+    public func getImageData() -> String {
+        return UIImage(named: fileName!)!.jpegData(compressionQuality: 0.5)!.base64EncodedString()
     }
 }
