@@ -22,8 +22,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonSelected(_ sender: AnyObject) {
-        print(sender.tag)
-       // table = "Table No. \(sender.tag!)"
         tableID = Int(sender.tag!)
         if getOrdersWithTableID(id: tableID) == 0{
             performSegue(withIdentifier: "goTo404", sender: self)

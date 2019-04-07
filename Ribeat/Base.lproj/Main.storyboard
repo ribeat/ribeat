@@ -238,6 +238,7 @@
                     <navigationItem key="navigationItem" title="Table 1" id="JNx-kr-J6R"/>
                     <connections>
                         <outlet property="productTable" destination="wWy-lX-5Xj" id="tme-j7-EtV"/>
+                        <outlet property="totalPriceLabel" destination="THu-xo-0nE" id="iaA-Qe-vhz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56C-Ei-SvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -253,12 +254,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No order for this table!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvw-ub-AJV">
-                                <rect key="frame" x="240" y="408" width="920" height="120"/>
+                                <rect key="frame" x="243" y="325" width="920" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chef" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-SM-ZYg">
+                                <rect key="frame" x="498" y="518" width="370" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="A7V-0v-zlD"/>
@@ -266,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rkn-cm-ezl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="584"/>
+            <point key="canvasLocation" x="1561.9326500732063" y="583.59375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7vn-d6-nYv">
@@ -288,6 +293,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chef" width="512" height="512"/>
         <image name="table" width="512" height="512"/>
     </resources>
 </document>

@@ -13,12 +13,13 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
     
     var tableName: String = ""
     var tableID: Int = 1
-    var images =  [UIImage(named: "p_bbq"), UIImage(named: "p_beef"), UIImage(named: "p_caesar"), UIImage(named: "pc_fish"), UIImage(named: "p_pineappleGinger")]
+    var totalPrice:Double = 0.0
     let persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     
     var orderDetails: Order = Order()
     var products: [Product] = [Product]()
 
+    @IBOutlet var totalPriceLabel: UILabel!
     
     @IBOutlet var productTable: UITableView!
     
@@ -49,21 +50,25 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = productTable.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
         cell.backgroundColor = UIColor.white
-        cell.textLabel?.text = products[indexPath.row].name
-        let a =  products[indexPath.row].ribImage as! RibImage
-        cell.imageView?.image = UIImage(named: a.fileName!)
+        let price = products[indexPath.row].price
+        let name = products[indexPath.row].name!
+        totalPrice += price
+        totalPriceLabel.text = "Total: \(totalPrice) $"
+        cell.textLabel?.text = "\(name)  \(price) $/Buc"
+        let ribImage =  products[indexPath.row].ribImage as! RibImage
+        cell.imageView?.image = UIImage(named: ribImage.fileName!)
         
         return cell
     }
     
     @IBAction func cashButtonPressed(_ sender: AnyObject) {
         print("Cash")
-        payment(with: "cash", amount: 28.50)
+        payment(with: "cash", amount: totalPrice)
     }
     
     @IBAction func cardButtonPressed(_ sender: AnyObject) {
         print("Card")
-        payment(with: "card", amount: 30.99)
+        payment(with: "card", amount: totalPrice)
     }
     
     func payment(with paymentType: String, amount: Double){
@@ -91,17 +96,12 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
         
         do {
             let orders = try persistentContainer.viewContext.fetch(ordersFetch) as! [Order]
-            let encoded = try JSONEncoder().encode(orders)
-         //   print(orders.count)
-        //    print(String(decoding: encoded, as: UTF8.self))
             for order in orders{
-             //   print(order)
                 for item in order.items!{
-                    let a = item as! OrderItem
-                    products.append(a.product as! Product)
+                    let orderItem = item as! OrderItem
+                    products.append(orderItem.product as! Product)
                 }
             }
-            print("Products:\(products.count)")
         
             
         } catch {
