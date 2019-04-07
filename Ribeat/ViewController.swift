@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
-    var table: String = ""
+    var tableID: Int = 1
+    let persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
 
     
     override func viewDidLoad() {
@@ -21,8 +23,15 @@ class ViewController: UIViewController {
     
     @IBAction func buttonSelected(_ sender: AnyObject) {
         print(sender.tag)
-        table = "Table No. \(sender.tag!)"
-        performSegue(withIdentifier: "goToTable", sender: self)
+       // table = "Table No. \(sender.tag!)"
+        tableID = Int(sender.tag!)
+        if getOrdersWithTableID(id: tableID) == 0{
+            performSegue(withIdentifier: "goTo404", sender: self)
+        }
+        else {
+            performSegue(withIdentifier: "goToTable", sender: self)
+        }
+        
         
     }
     
@@ -30,9 +39,35 @@ class ViewController: UIViewController {
         if segue.identifier == "goToTable"{
             
             let destinationVC = segue.destination as! OrderViewController
-            destinationVC.table = table
+            destinationVC.tableName = "Table No. \(tableID)"
+            destinationVC.tableID = tableID
         
         }
+    }
+    
+    func getOrdersWithTableID(id: Int)-> Int{
+        
+        let ordersFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Order")
+        let predicate = NSPredicate(format: "table = %@", argumentArray: [id])
+        ordersFetch.predicate = predicate
+        
+        var ordersCount = 0
+        
+        do {
+            let orders = try persistentContainer.viewContext.fetch(ordersFetch) as! [Order]
+            let encoded = try JSONEncoder().encode(orders)
+            //            orderDetails = orders[0]
+            print(orders.count)
+            ordersCount = orders.count
+            //    print(String(decoding: encoded, as: UTF8.self))
+            //   print(orderDetails)
+            
+        } catch {
+            print(error)
+        }
+
+        return ordersCount
+        
     }
 
 
