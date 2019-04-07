@@ -22,6 +22,7 @@
 		F2AEB7312258D2F900BF3ECF /* ProductCategory+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7302258D2F900BF3ECF /* ProductCategory+JSON.swift */; };
 		F2AEB7332258E4F100BF3ECF /* RibImage+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7322258E4F100BF3ECF /* RibImage+JSON.swift */; };
 		F2AEB7352258EE8800BF3ECF /* Product+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AEB7342258EE8800BF3ECF /* Product+JSON.swift */; };
+		F2E340232259FBDE009DD61D /* RibeatPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E340222259FBDE009DD61D /* RibeatPrinter.swift */; };
 		F2F9D2D9225916CC00731A23 /* Order+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9D2D8225916CC00731A23 /* Order+JSON.swift */; };
 		F2F9D2DB2259182700731A23 /* OrderItem+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9D2DA2259182700731A23 /* OrderItem+JSON.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		F2AEB7302258D2F900BF3ECF /* ProductCategory+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductCategory+JSON.swift"; sourceTree = "<group>"; };
 		F2AEB7322258E4F100BF3ECF /* RibImage+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RibImage+JSON.swift"; sourceTree = "<group>"; };
 		F2AEB7342258EE8800BF3ECF /* Product+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+JSON.swift"; sourceTree = "<group>"; };
+		F2E340222259FBDE009DD61D /* RibeatPrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibeatPrinter.swift; sourceTree = "<group>"; };
 		F2F9D2D8225916CC00731A23 /* Order+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+JSON.swift"; sourceTree = "<group>"; };
 		F2F9D2DA2259182700731A23 /* OrderItem+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderItem+JSON.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				F2AEB70E2258C9B900BF3ECF /* RibServing.swift */,
+				F2E340222259FBDE009DD61D /* RibeatPrinter.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -201,7 +204,7 @@
 				F204B4C52258831D00E027AE /* Sources */,
 				F204B4C62258831D00E027AE /* Frameworks */,
 				F204B4C72258831D00E027AE /* Resources */,
-				E8303B4494B29BBBC314384E /* [CP] Embed Pods Frameworks */,
+				49266A862D5700A81D21186C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,6 +275,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		49266A862D5700A81D21186C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RibeatTests/Pods-RibeatTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RibeatTests/Pods-RibeatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		68513751090CCF76FEA722B7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,7 +333,6 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Ribeat/Pods-Ribeat-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
@@ -315,7 +343,6 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
@@ -324,34 +351,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ribeat/Pods-Ribeat-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8303B4494B29BBBC314384E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RibeatTests/Pods-RibeatTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RibeatTests/Pods-RibeatTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F581740E800859217F13F611 /* [CP] Check Pods Manifest.lock */ = {
@@ -384,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2AEB7332258E4F100BF3ECF /* RibImage+JSON.swift in Sources */,
+				F2E340232259FBDE009DD61D /* RibeatPrinter.swift in Sources */,
 				F204B4B82258831C00E027AE /* ViewController.swift in Sources */,
 				F204B4B62258831C00E027AE /* AppDelegate.swift in Sources */,
 				F2AEB7352258EE8800BF3ECF /* Product+JSON.swift in Sources */,

@@ -73,6 +73,8 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
         
         let positiveResponse = UIAlertAction(title: "YES", style: .default) { (action) in
             self.setOrderToReady()
+            let printer = RibeatPrinter(withIp: "192.168.86.203", andPort: 9100)
+            printer.send(order: self.orderDetails)
         }
         
         let nagativeResponse = UIAlertAction(title: "NO", style: .default) { (action) in

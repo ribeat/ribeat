@@ -1,17 +1,13 @@
 PODS:
-  - Alamofire (4.8.1)
-  - RxAtomic (4.4.2)
-  - RxBlocking (4.4.2):
-    - RxAtomic (>= 4.4.2, ~> 4.4)
+  - Alamofire (4.8.2)
+  - RxBlocking (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
-  - RxCocoa (4.4.2):
+  - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
-  - RxSwift (4.4.2):
-    - RxAtomic (>= 4.4.2, ~> 4.4)
-  - RxTest (4.4.2):
-    - RxAtomic (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
+  - RxTest (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
-  - Swifter (1.4.5)
+  - Swifter (1.4.6)
   - SwiftSocket (2.0.2)
 
 DEPENDENCIES:
@@ -26,7 +22,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - RxAtomic
     - RxBlocking
     - RxCocoa
     - RxSwift
@@ -35,15 +30,14 @@ SPEC REPOS:
     - SwiftSocket
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
-  RxBlocking: e96fdda1473d81332a6ed2cface935dc2167a122
-  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
-  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
-  RxTest: 6433d5b6229f5de424fa534bc22b5e6c38b0b671
-  Swifter: eb2bc1d192a1c09169c7fefd01971565fa940521
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  RxBlocking: 79413e4d916f44bb3e113c5b2cc059e36fe58910
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  RxTest: 3ccb66bfbace0bf7df1c43a7c75d046f8ce60372
+  Swifter: 2ed278fbf7b16cbe97269eb56d8e8749b1ec4042
   SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
 
 PODFILE CHECKSUM: 1772310a57ec00ec03dd7997ca792242feee08ef
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.6.0.beta.1

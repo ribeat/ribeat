@@ -28,4 +28,18 @@ extension Order : Encodable {
             try container.encode(orderItems, forKey: .items)
         }
     }
+    
+    func getPrinterPayload() -> String? {
+        return """
+        LF
+        LF
+        LF
+        HackTM Oradea
+        LF
+        LF
+        \(self.orderId)
+        """
+    }
+    
+    
 }
