@@ -52,9 +52,7 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
         cell.backgroundColor = UIColor.white
         let price = products[indexPath.row].price
         let name = products[indexPath.row].name!
-        totalPrice += price
-        totalPriceLabel.text = "Total: \(totalPrice) $"
-        cell.textLabel?.text = "\(name)  \(price) $/Buc"
+        cell.textLabel?.text = "\(name)  \(price) RON/Buc"
         let ribImage =  products[indexPath.row].ribImage as! RibImage
         cell.imageView?.image = UIImage(named: ribImage.fileName!)
         
@@ -72,7 +70,7 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
     }
     
     func payment(with paymentType: String, amount: Double){
-        let alert = UIAlertController(title: "Are you sure that do you want to pay \(amount) euro with the \(paymentType) method?", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Are you sure that do you want to pay \(amount) RON with the \(paymentType) method?", message: "", preferredStyle: .alert)
         
         let positiveResponse = UIAlertAction(title: "YES", style: .default) { (action) in
             print("Yes, I'm sure")
@@ -99,9 +97,19 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
             for order in orders{
                 for item in order.items!{
                     let orderItem = item as! OrderItem
-                    products.append(orderItem.product as! Product)
+                    for i in 0 ..< orderItem.quantity{
+                         products.append(orderItem.product as! Product)
+                    }
+                   
                 }
             }
+            
+            for product in products{
+                print(totalPrice)
+                totalPrice += product.price
+            }
+            
+            totalPriceLabel.text = "Total: \(totalPrice) RON"
         
             
         } catch {
