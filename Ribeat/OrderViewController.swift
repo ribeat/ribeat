@@ -17,6 +17,7 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
     let persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     
     var orderDetails: Order = Order()
+    var ordersList: [Order] = [Order]()
     var products: [Product] = [Product]()
 
     @IBOutlet var totalPriceLabel: UILabel!
@@ -60,12 +61,10 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func cashButtonPressed(_ sender: AnyObject) {
-        print("Cash")
         payment(with: "cash", amount: totalPrice)
     }
     
     @IBAction func cardButtonPressed(_ sender: AnyObject) {
-        print("Card")
         payment(with: "card", amount: totalPrice)
     }
     
@@ -73,11 +72,10 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
         let alert = UIAlertController(title: "Are you sure that do you want to pay \(amount) RON with the \(paymentType) method?", message: "", preferredStyle: .alert)
         
         let positiveResponse = UIAlertAction(title: "YES", style: .default) { (action) in
-            print("Yes, I'm sure")
+            self.setOrderToReady()
         }
         
         let nagativeResponse = UIAlertAction(title: "NO", style: .default) { (action) in
-            print("No, was an error")
         }
         
         
@@ -89,15 +87,16 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
     func getOrdersWithTableID(id: Int){
         
         let ordersFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Order")
-        let predicate = NSPredicate(format: "table = %@", argumentArray: [id])
+        let predicate = NSPredicate(format: "table = %@ && orderReady = 0", argumentArray: [id])
         ordersFetch.predicate = predicate
         
         do {
             let orders = try persistentContainer.viewContext.fetch(ordersFetch) as! [Order]
             for order in orders{
+                ordersList.append(order as! Order)
                 for item in order.items!{
                     let orderItem = item as! OrderItem
-                    for i in 0 ..< orderItem.quantity{
+                    for _ in 0 ..< orderItem.quantity{
                          products.append(orderItem.product as! Product)
                     }
                    
@@ -105,17 +104,45 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
             }
             
             for product in products{
-                print(totalPrice)
                 totalPrice += product.price
             }
             
             totalPriceLabel.text = "Total: \(totalPrice) RON"
+            
         
             
         } catch {
             print(error)
         }
         
+    }
+    
+    func setOrderToReady(){
+        for order in self.ordersList{
+            let ordersFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Order")
+            let predicate = NSPredicate(format: "orderId = %@", argumentArray: [order.orderId])
+            ordersFetch.predicate = predicate
+            do {
+                let ordersByID = try self.persistentContainer.viewContext.fetch(ordersFetch) as! [Order]
+                
+                ordersByID[0].orderReady = 1;
+                
+                do{
+                    try self.persistentContainer.viewContext.save()
+                    
+                }catch{
+                    print("Error saving context \(error)")
+                }
+                
+                
+            } catch {
+                print(error)
+            }
+            
+            print("Done")
+            self.navigationController?.popViewController(animated: true)
+            
+        }
     }
     
 

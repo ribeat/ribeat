@@ -23,7 +23,8 @@ class ViewController: UIViewController {
     
     @IBAction func buttonSelected(_ sender: AnyObject) {
         tableID = Int(sender.tag!)
-        if getOrdersWithTableID(id: tableID) == 0{
+        let size = getOrdersWithTableID(id: tableID)
+        if size == 0 {
             performSegue(withIdentifier: "goTo404", sender: self)
         }
         else {
@@ -46,7 +47,7 @@ class ViewController: UIViewController {
     func getOrdersWithTableID(id: Int)-> Int{
         
         let ordersFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Order")
-        let predicate = NSPredicate(format: "table = %@", argumentArray: [id])
+        let predicate = NSPredicate(format: "table = %@ && orderReady = 0", argumentArray: [id])
         ordersFetch.predicate = predicate
         
         var ordersCount = 0

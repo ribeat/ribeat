@@ -9,7 +9,7 @@
 import Foundation
 extension OrderItem : Encodable {
     private enum CodingKeys : String, CodingKey {
-        case oiId="id", baypassDeliveryOrder, quantity, order="orderId", product="productId"
+        case oiId="id", baypassDeliveryOrder, quantity, order="orderId", product="productId", productName
     }
     
     public func encode(to encoder: Encoder) throws {
@@ -19,5 +19,6 @@ extension OrderItem : Encodable {
         try container.encode(quantity, forKey: .quantity)
         try container.encode(order?.orderId, forKey: .order)
         try container.encode(product?.pId, forKey: .product)
+        try container.encode(product?.name, forKey: .productName)
     }
 }
