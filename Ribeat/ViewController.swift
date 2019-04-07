@@ -55,13 +55,7 @@ class ViewController: UIViewController {
         
         do {
             let orders = try persistentContainer.viewContext.fetch(ordersFetch) as! [Order]
-            let encoded = try JSONEncoder().encode(orders)
-            //            orderDetails = orders[0]
-            print(orders.count)
             ordersCount = orders.count
-            //    print(String(decoding: encoded, as: UTF8.self))
-            //   print(orderDetails)
-            
         } catch {
             print(error)
         }

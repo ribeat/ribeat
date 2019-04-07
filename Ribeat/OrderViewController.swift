@@ -17,6 +17,7 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
     let persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     
     var orderDetails: Order = Order()
+    var products: [Product] = [Product]()
 
     
     @IBOutlet var productTable: UITableView!
@@ -42,14 +43,15 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = productTable.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
         cell.backgroundColor = UIColor.white
-        cell.textLabel?.text = "Hello World"
-        cell.imageView?.image = images.randomElement() ?? images[0]
+        cell.textLabel?.text = products[indexPath.row].name
+        let a =  products[indexPath.row].ribImage as! RibImage
+        cell.imageView?.image = UIImage(named: a.fileName!)
         
         return cell
     }
@@ -90,10 +92,17 @@ class OrderViewController: UIViewController,  UITableViewDelegate, UITableViewDa
         do {
             let orders = try persistentContainer.viewContext.fetch(ordersFetch) as! [Order]
             let encoded = try JSONEncoder().encode(orders)
-//            orderDetails = orders[0]
-            print(orders.count)
+         //   print(orders.count)
         //    print(String(decoding: encoded, as: UTF8.self))
-         //   print(orderDetails)
+            for order in orders{
+             //   print(order)
+                for item in order.items!{
+                    let a = item as! OrderItem
+                    products.append(a.product as! Product)
+                }
+            }
+            print("Products:\(products.count)")
+        
             
         } catch {
             print(error)
